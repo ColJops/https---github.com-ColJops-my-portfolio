@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 export default function ProjectCard({ project }) {
   return (
@@ -24,15 +25,15 @@ export default function ProjectCard({ project }) {
           </span>
         ))}
       </div>
-
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-4 text-cyan-400 hover:underline"
-      >
-        GitHub →
-      </a>
+        <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 text-cyan-400 hover:text-cyan-300 transition"
+        >
+            <FaGithub />
+        Repozytorium
+        </a>
     </motion.div>
   );
 }
