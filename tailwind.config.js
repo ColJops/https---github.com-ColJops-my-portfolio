@@ -1,10 +1,14 @@
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#22d3ee",
+        secondary: "#a855f7",
+        bg: "#09090b",
+        card: "#18181b",
+      },
+    },
   },
   plugins: [],
 }
