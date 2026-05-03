@@ -1,13 +1,15 @@
+import { motion } from "framer-motion";
+
 export default function Projects() {
   const projects = [
     {
       name: "Dungeon Crawl",
-      desc: "Gra RPG napisana w Javie z systemem zapisu i AI przeciwników",
+      desc: "Gra RPG w Javie z AI, zapisem i systemem walki",
       link: "#",
     },
     {
       name: "Portfolio",
-      desc: "Nowoczesna strona w React + Tailwind",
+      desc: "Nowoczesna strona React + Tailwind",
       link: "#",
     },
   ];
@@ -18,20 +20,29 @@ export default function Projects() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((p, i) => (
-          <div
+          <motion.div
             key={i}
-            className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-cyan-400 transition"
+            whileHover={{ scale: 1.05 }}
+            className="relative bg-zinc-900 border border-zinc-800 rounded-xl p-6 overflow-hidden"
           >
-            <h3 className="text-xl font-semibold">{p.name}</h3>
-            <p className="text-zinc-400 mt-2">{p.desc}</p>
+            {/* glow */}
+            <div className="absolute inset-0 opacity-0 hover:opacity-100 transition bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-xl"></div>
+
+            <h3 className="text-xl font-semibold relative z-10">
+              {p.name}
+            </h3>
+
+            <p className="text-zinc-400 mt-2 relative z-10">
+              {p.desc}
+            </p>
 
             <a
               href={p.link}
-              className="inline-block mt-4 text-cyan-400 hover:underline"
+              className="inline-block mt-4 text-cyan-400 hover:underline relative z-10"
             >
               GitHub →
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
