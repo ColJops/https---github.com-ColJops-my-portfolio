@@ -6,6 +6,10 @@ export const projects = [
     link: "https://github.com/ColJops/DemoEngine",
     tech: ["Java", "JavaFX", "AI"],
     featured: true,
+    github: {
+      owner: "ColJops",
+      repo: "DemoEngine",
+    },
   },
   {
     id: 2,
@@ -13,5 +17,9 @@ export const projects = [
     desc: "Nowoczesna strona React + Tailwind",
     link: "https://github.com/ColJops/https---github.com-ColJops-my-portfolio",
     tech: ["React", "Tailwind"],
+    github: {
+      owner: "ColJops",
+      repo: "https---github.com-ColJops-my-portfolio",
+    },
   },
 ];
