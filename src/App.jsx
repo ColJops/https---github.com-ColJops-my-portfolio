@@ -8,18 +8,32 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <>
+    <div className="min-h-screen bg-zinc-950 text-white relative overflow-hidden">
+
+      {/* 🔥 GRID */}
+      <div className="fixed inset-0 -z-20 opacity-10 
+        bg-[radial-gradient(circle,_#ffffff_1px,_transparent_1px)] 
+        [background-size:20px_20px]"></div>
+
+      {/* 🔥 GLOW */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-cyan-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+        
+        <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-purple-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+
+        <div className="absolute top-[30%] left-[50%] w-[300px] h-[300px] bg-indigo-500 opacity-10 blur-3xl rounded-full"></div>
+      </div>
+
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/o-mnie" element={<About />} />
         <Route path="/projekty" element={<Projects />} />
         <Route path="/projekty/:id" element={<ProjectDetails />} />
       </Routes>
-      <div className="bg-zinc-950 text-white min-h-screen">
-        {/* app */}
-      </div>
+
       <Footer />
-    </>
+    </div>
   );
 }

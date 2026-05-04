@@ -21,7 +21,7 @@ export const projects = [
     tech: ["React", "Tailwind"],
     github: {
       owner: "ColJops",
-      repo: "https---github.com-ColJops-my-portfolio",
+      repo: "my-portfolio",
     },
   },
 ];
