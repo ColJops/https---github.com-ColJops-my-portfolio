@@ -5,23 +5,28 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 import Footer from "./components/Footer";
+import MatrixRain from "./components/MatrixRain";
+import AnimeBackground from "./components/AnimeBackground";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-white relative overflow-hidden">
+    <div className="min-h-screen text-white relative overflow-hidden bg-transparent">
+      <MatrixRain side="left" />
+      <MatrixRain side="right" />
+      <AnimeBackground />
 
-      {/* GRID */}
-      <div className="fixed inset-0 -z-20 opacity-10 
-        bg-[radial-gradient(circle,_#ffffff_1px,_transparent_1px)] 
-        [background-size:20px_20px]"></div>
+      {/* 🔥 ANIMOWANY GRADIENT */}
+      <div className="fixed inset-0 -z-30 animate-gradient bg-gradient-to-br from-zinc-950 via-zinc-900 to-black"></div>
 
-      {/*  GLOW */}
+      {/* 🔥 PARTICLES */}
+      <div className="fixed inset-0 -z-20 pointer-events-none opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.15)_1px,_transparent_1px)] [background-size:30px_30px]"></div>
+      </div>
+
+      {/* 🔥 GLOW */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-cyan-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
-        
         <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-purple-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
-
-        <div className="absolute top-[30%] left-[50%] w-[300px] h-[300px] bg-indigo-500 opacity-10 blur-3xl rounded-full"></div>
       </div>
 
       <Navbar />
