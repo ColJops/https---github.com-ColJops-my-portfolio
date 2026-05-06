@@ -5,10 +5,11 @@ import Reveal from "../components/Reveal";
 import cyb4 from "../assets/gfx/cyb4.jpg";
 import prog6 from "../assets/gfx/prog6.jpg";
 import prog2 from "../assets/gfx/prog2.jpg";
+import { useLang } from "../context/LanguageContext";
 
 export default function Home() {
   const navigate = useNavigate();
-
+  const { t } = useLang();
   return (
     <>
       {/* 🔥 HERO */}
@@ -17,9 +18,9 @@ export default function Home() {
         {/* LEFT */}
         <div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Tworzę{" "}
+            
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
-              nowoczesne aplikacje
+              {t("home.title")}
             </span>
           </h1>
 
@@ -34,14 +35,14 @@ export default function Home() {
               onClick={() => navigate("/projekty")}
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg hover:scale-105 transition"
             >
-              Zobacz projekty
+              {t("home.projectsBtn")}
             </button>
 
             <button
               onClick={() => navigate("/o-mnie#kontakt")}
               className="px-8 py-3 border border-zinc-700 rounded-lg hover:border-cyan-400 transition"
             >
-              Kontakt
+              {t("home.contactBtn")}
             </button>
           </div>
         </div>
