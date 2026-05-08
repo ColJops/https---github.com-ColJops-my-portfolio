@@ -1,4 +1,5 @@
 import dungeonImg from "../assets/projects/dungeoncrawl.png";
+import portfolioImg from "../assets/projects/portfolio.png";
 export const projects = [
   {
     id: 1,
@@ -19,6 +20,8 @@ export const projects = [
     desc: "Nowoczesna strona React + Tailwind",
     link: "https://github.com/ColJops/my-portfolio",
     tech: ["React", "Tailwind"],
+    featured: true,
+    image: portfolioImg,
     github: {
       owner: "ColJops",
       repo: "my-portfolio",
