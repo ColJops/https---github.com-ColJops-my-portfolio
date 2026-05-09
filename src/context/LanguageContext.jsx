@@ -1,4 +1,11 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+
+import { translations } from "../i18n/translations";
 
 const LanguageContext = createContext();
 
@@ -11,11 +18,32 @@ export function LanguageProvider({ children }) {
     localStorage.setItem("lang", lang);
   }, [lang]);
 
+  const t = (path) => {
+    const keys = path.split(".");
+
+    let value = translations[lang];
+
+    for (const key of keys) {
+      value = value?.[key];
+    }
+
+    return value || path;
+  };
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider
+      value={{
+        lang,
+        setLang,
+        t,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
 }
 
-export const useLang = () => useContext(LanguageContext); // eslint-disable-line react-refresh/only-export-components
+// eslint-disable-next-line react-refresh/only-export-components
+export function useLang() {
+  return useContext(LanguageContext);
+}

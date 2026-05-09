@@ -1,8 +1,9 @@
 import dungeonImg from "../assets/projects/dungeoncrawl.png";
-import portfolioImg from "../assets/projects/portfolio.png";
+import portfolioImg from "../assets/projects/portfolio.webp";
 export const projects = [
   {
     id: 1,
+    translationKey: "dungeonCrawl",
     name: "Dungeon Crawl",
     desc: "Gra RPG w Javie z AI, zapisem i systemem walki",
     link: "https://github.com/ColJops/DemoEngine",
@@ -16,6 +17,7 @@ export const projects = [
   },
   {
     id: 2,
+    translationKey: "portfolio",
     name: "Portfolio",
     desc: "Nowoczesna strona React + Tailwind",
     link: "https://github.com/ColJops/my-portfolio",
@@ -29,6 +31,7 @@ export const projects = [
   },
   {
   id: 3,
+  translationKey: "battleships",
   name: "Battleships",
   desc: "Gra w statki w trybie tekstowym",
   link: "https://github.com/ColJops/Battleships",
@@ -41,6 +44,7 @@ export const projects = [
 },
 {
   id: 4,
+  translationKey: "tvStories",
   name: "TV Stories",
   desc: "Prosta baza danych o filmach",
   link: "https://github.com/ColJops/tv_stories",
@@ -53,6 +57,7 @@ export const projects = [
 },
 {
   id: 5,
+  translationKey: "askMate",
   name: "AskMate",
   desc: "Aplikacja fullstack",
   link: "https://github.com/ColJops/askmate",
@@ -65,6 +70,7 @@ export const projects = [
 },
 {
   id: 6,
+  translationKey: "supersprinter3000",
   name: "Supersprinter3000",
   desc: "REST API",
   link: "https://github.com/ColJops/supersprinter3000",
@@ -77,6 +83,7 @@ export const projects = [
 },
 {
   id: 7,
+  translationKey: "elProyecteGrande",
   name: "ElProyecteGrande",
   desc: "Aplikacja dla miłośników psów",
   link: "https://github.com/ColJops/elproyectegrande",

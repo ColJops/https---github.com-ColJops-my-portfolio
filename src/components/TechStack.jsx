@@ -19,10 +19,10 @@ import {
 } from "react-icons/si";
 
 import { DiPython } from "react-icons/di";
+import { useTranslations } from "../utils/translations";
 
-// 🔥 MAPA IKON
 const tech = {
-  Frontend: [
+  frontend: [
     { name: "React", icon: <FaReact />, color: "text-cyan-400" },
     { name: "JavaScript", icon: <FaJs />, color: "text-yellow-400" },
     { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-400" },
@@ -30,20 +30,17 @@ const tech = {
     { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500" },
     { name: "Bootstrap", icon: <FaBootstrap />, color: "text-purple-400" },
   ],
-
-  Backend: [
+  backend: [
     { name: "Java", icon: <FaJava />, color: "text-orange-500" },
     { name: "Spring Boot", icon: <SiSpringboot />, color: "text-green-400" },
     { name: "Django", icon: <SiDjango />, color: "text-green-500" },
     { name: "Python", icon: <DiPython />, color: "text-yellow-300" },
   ],
-
-  "Bazy danych": [
+  databases: [
     { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-400" },
     { name: "Microsoft SQL", icon: <FaDatabase />, color: "text-red-400" },
   ],
-
-  Narzędzia: [
+  tools: [
     { name: "Git", icon: <FaGitAlt />, color: "text-orange-400" },
     { name: "Jira", icon: <SiJira />, color: "text-blue-300" },
     { name: "Mockito", icon: "🧪", color: "text-pink-400" },
@@ -51,34 +48,30 @@ const tech = {
 };
 
 export default function TechStack() {
+  const t = useTranslations();
+
   return (
     <section className="px-8 py-20 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold mb-12 text-center">
-        Tech Stack
+        {t("techStack.title")}
       </h2>
 
       <div className="space-y-12">
         {Object.entries(tech).map(([category, items]) => (
           <div key={category}>
             <h3 className="text-xl text-zinc-400 mb-4">
-              {category}
+              {t(`techStack.categories.${category}`)}
             </h3>
 
             <div className="flex flex-wrap gap-4">
-              {items.map((item, i) => (
+              {items.map((item) => (
                 <motion.div
-                  key={i}
+                  key={item.name}
                   whileHover={{ scale: 1.1 }}
-                  className="flex items-center gap-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl 
-                  hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition cursor-default"
+                  className="flex items-center gap-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition cursor-default"
                 >
-                  <span className={`text-xl ${item.color}`}>
-                    {item.icon}
-                  </span>
-
-                  <span className="text-zinc-200">
-                    {item.name}
-                  </span>
+                  <span className={`text-xl ${item.color}`}>{item.icon}</span>
+                  <span className="text-zinc-200">{item.name}</span>
                 </motion.div>
               ))}
             </div>

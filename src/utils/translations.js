@@ -1,12 +1,19 @@
+import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n";
 
-export const t = (path) => {
-  const keys = path.split(".");
-  let value = translations[window.localStorage.getItem("lang") || "pl"];
+export const useTranslations = () => {
+  const { lang } = useLang();
 
-  for (let k of keys) {
-    value = value?.[k];
-  }
+  const t = (path) => {
+    const keys = path.split(".");
+    let value = translations[lang] ?? translations.pl;
 
-  return value || path;
+    for (const key of keys) {
+      value = value?.[key];
+    }
+
+    return value ?? path;
+  };
+
+  return t;
 };
