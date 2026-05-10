@@ -1,5 +1,7 @@
 import dungeonImg from "../assets/projects/dungeoncrawl.png";
 import portfolioImg from "../assets/projects/portfolio.webp";
+import legendImage from "../assets/projects/legends.png";
+
 export const projects = [
   {
     id: 1,
@@ -21,7 +23,7 @@ export const projects = [
     name: "Portfolio",
     desc: "Nowoczesna strona React + Tailwind",
     link: "https://github.com/ColJops/my-portfolio",
-    tech: ["React", "Tailwind"],
+    tech: ["React", "Tailwind CSS"],
     featured: true,
     image: portfolioImg,
     github: {
@@ -94,4 +96,25 @@ export const projects = [
       repo: "elproyectegrande",
     },
 },
+{
+  id: 8,
+  translationKey: "legends",
+  name: "Legends",
+  desc: "Serwis do zbierania legend, mitów i plotek regionalnych",
+  link: "https://github.com/ColJops/legends",
+  tech: [
+    "Java 24+",
+    "Spring Boot",
+    "React.js",
+    "MySQL",
+    "REST API",
+    "Tailwind CSS",
+  ],
+  featured: true,
+  image: legendImage,
+  github: {
+    owner: "ColJops",
+    repo: "legends",
+  },
+}
 ];
