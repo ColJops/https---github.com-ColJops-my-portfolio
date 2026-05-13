@@ -7,6 +7,7 @@ import prog6 from "../assets/gfx/prog6.jpg";
 import prog2 from "../assets/gfx/prog2.jpg";
 import { useTranslations } from "../utils/translations";
 import SiteInfo from "../components/SiteInfo";
+import TerminalSection from "../components/TerminalSection";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -82,6 +83,8 @@ export default function Home() {
           />
           </Reveal>
         </section>
+
+      <TerminalSection />
 
       <section className="px-5 sm:px-8 py-14 md:py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center overflow-hidden">
       <Reveal direction="left">

@@ -80,12 +80,6 @@ export const translations = {
       inactive: "Nieaktywny projekt",
       moderate: "Umiarkowana aktywność",
     },
-    commits: {
-      loadError: "Błąd podczas ładowania commitów.",
-      today: "dzisiaj",
-      yesterday: "wczoraj",
-      daysAgo: "dni temu",
-    },
     footer: {
       builtWith: "Built with",
     },
@@ -95,7 +89,20 @@ export const translations = {
         "Mniejsze projekty, eksperymenty, aplikacje treningowe i archiwalne repozytoria.",
       openRepository: "Otwórz repozytorium",
     },
-    projects: {
+    commits: {
+      loadError: "Błąd podczas ładowania commitów.",
+      rateLimit: "Limit zapytań GitHub API został przekroczony.",
+      empty: "Brak commitów do wyświetlenia.",
+      today: "dzisiaj",
+      yesterday: "wczoraj",
+      daysAgo: "dni temu",
+    },
+    terminal: {
+    whoami: "Junior Java Developer",
+    status: "Aktywnie rozwijam projekty full-stack i gry w Javie.",
+    focus: "Backend, React, REST API, bazy danych i cyberbezpieczeństwo.",
+  },
+        projects: {
       dungeonCrawl: {
         name: "Dungeon Crawl",
         desc: "Gra RPG w Javie z AI, zapisem i systemem walki",
@@ -128,9 +135,12 @@ export const translations = {
       name: "Legends",
       desc:
     "Serwis full-stack do zbierania legend, mitów i lokalnych historii z regionu.",
-},
     },
   },
+   projectDetails: {
+    backToProjects: "Powrót do projektów",
+    },
+},
   en: {
     nav: {
       home: "Home",
@@ -212,12 +222,6 @@ export const translations = {
       inactive: "Inactive project",
       moderate: "Moderate activity",
     },
-    commits: {
-      loadError: "Error while loading commits.",
-      today: "today",
-      yesterday: "yesterday",
-      daysAgo: "days ago",
-    },
     footer: {
       builtWith: "Built with",
     },
@@ -227,7 +231,20 @@ export const translations = {
         "Smaller projects, experiments, training applications and archived repositories.",
       openRepository: "Open repository",
     },
-    projects: {
+    terminal: {
+      whoami: "Junior Java Developer",
+      status: "Actively developing full-stack projects and Java games.",
+      focus: "Backend, React, REST APIs, databases and cybersecurity.",
+    },
+    commits: {
+      loadError: "Error while loading commits.",
+      rateLimit: "GitHub API rate limit has been exceeded.",
+      empty: "No commits to display.",
+      today: "today",
+      yesterday: "yesterday",
+      daysAgo: "days ago",
+    },
+        projects: {
       dungeonCrawl: {
         name: "Dungeon Crawl",
         desc: "Java RPG game with AI, save system, and combat mechanics",
@@ -258,9 +275,11 @@ export const translations = {
       },
       legends: {
         name: "Legends",
-        desc:
-          "A full-stack service for collecting regional legends, myths and local stories.",
+        desc: "A full-stack service for collecting regional legends, myths and local stories.",
       },
     },
+    projectDetails: {
+        backToProjects: "Back to projects",
+      },
   },
 };

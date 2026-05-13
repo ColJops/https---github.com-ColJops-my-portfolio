@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { projects } from "../data/projects";
 import CommitList from "../components/CommitList";
@@ -61,6 +61,25 @@ export default function ProjectDetails() {
 
   return (
     <section className="px-8 py-20 max-w-5xl mx-auto">
+      <Link
+    to="/projekty"
+    className="
+      mb-8
+      inline-flex
+      items-center
+      gap-2
+      text-sm
+      text-cyan-400
+      transition
+      hover:text-cyan-300
+      focus:outline-none
+      focus:ring-2
+      focus:ring-cyan-400
+      rounded
+    "
+  >
+     ← {t("projectDetails.backToProjects")}
+  </Link>  
       <h1 className="text-4xl font-bold text-white">{projectName}</h1>
 
       <p className="text-zinc-400 mt-4">{projectDescription}</p>
